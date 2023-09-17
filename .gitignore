@@ -34,3 +34,4 @@
 # Others
 .*
 !.gitignore
+*:Zone.Identifier
