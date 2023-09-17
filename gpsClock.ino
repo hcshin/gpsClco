@@ -14,11 +14,12 @@
 #define NUM_DAYS_BIG_MONTH
 // Stepper
 #define STEPPER_CONF_DELAY_MS 10
+#define STEPPER_MOVE_HANDS_DELAY_MS 300
 #define STEPS_PER_REV 2038
 #define MOTOR_SPEED 10
-#define HR_UNIT_STEPS 182 // ad hoc values due to cheap inaccurate stepper
-#define MIN_UNIT_STEPS 39 // ad hoc values due to cheap inaccurate stepper
-#define DATE_UNIT_STEPS 35 // ad hoc values due to cheap inaccurate stepper
+#define HR_UNIT_STEPS 184 // ad hoc values due to cheap inaccurate stepper
+#define MIN_UNIT_STEPS 36 // ad hoc values due to cheap inaccurate stepper
+#define DATE_UNIT_STEPS 34 // ad hoc values due to cheap inaccurate stepper
 #define MIN_PIN1 2
 #define MIN_PIN2 3
 #define MIN_PIN3 4
@@ -37,13 +38,13 @@
 #define DATE_ANCHOR_SENSOR_PIN A2
 #define HALL_SENSOR_OFF_VALUE 1023
 
-
 // enums
 enum ENUM_TIME_DATE_MONTH_YEAR {HOUR = 0, MINUTE, DATE, MONTH, YEAR};
 enum MOTOR_DESIG {HR_MOT = 0, MINUTE_MOT, DATE_MOT};
 
 // Global Params
-unsigned int debugMask = 0x1E0;
+unsigned int debugMask = 0x040; // can also be used for tracking state
+unsigned int testMask = 0x00;
 int localOffset2Utc = 9; // might be parsed by DIP switches later 
 
 // Global Variables and Buffers
@@ -80,14 +81,6 @@ void configureSteppers() {
     hrStepper.step(1);
     delay(STEPPER_CONF_DELAY_MS);
   } 
-  while (digitalRead(MIN_ANCHOR_SENSOR_PIN) == HIGH) {
-    minStepper.step(1);
-    delay(STEPPER_CONF_DELAY_MS);
-  }
-  while (digitalRead(DATE_ANCHOR_SENSOR_PIN) == HIGH) {
-    dateStepper.step(-1); // date stepper moves in retrograde manner
-    delay(STEPPER_CONF_DELAY_MS);
-  }
 
   // Turn off all steppers to save power
   digitalWrite(HR_PIN1, LOW);
@@ -95,10 +88,20 @@ void configureSteppers() {
   digitalWrite(HR_PIN3, LOW);
   digitalWrite(HR_PIN4, LOW);
 
+  while (digitalRead(MIN_ANCHOR_SENSOR_PIN) == HIGH) {
+    minStepper.step(1);
+    delay(STEPPER_CONF_DELAY_MS);
+  }
+
   digitalWrite(MIN_PIN1, LOW);
   digitalWrite(MIN_PIN2, LOW);
   digitalWrite(MIN_PIN3, LOW);
   digitalWrite(MIN_PIN4, LOW);
+
+  while (digitalRead(DATE_ANCHOR_SENSOR_PIN) == HIGH) {
+    dateStepper.step(-1); // date stepper moves in retrograde manner
+    delay(STEPPER_CONF_DELAY_MS);
+  }
 
   digitalWrite(DATE_PIN1, LOW);
   digitalWrite(DATE_PIN2, LOW);
@@ -120,13 +123,14 @@ void activateMotorsByUnits(unsigned int motorDesig, int diffInUnits) {
       else { // Non-zero positions
         while (diffInUnits > 0) { // move hand repetitively until the diff becomes 0
           if (localTimeDateMonthYearHand[HOUR] % 2 == 1)
-            hrStepper.step(HR_UNIT_STEPS + 2); // fine adjustment
+            hrStepper.step(HR_UNIT_STEPS + 1); // fine adjustment
           else
             hrStepper.step(HR_UNIT_STEPS);
 
           diffInUnits--;
           localTimeDateMonthYearHand[HOUR] = localTimeDateMonthYear[HOUR] - diffInUnits;
           if (localTimeDateMonthYearHand[HOUR] < 0) localTimeDateMonthYearHand[HOUR] += 12;
+          delay(STEPPER_MOVE_HANDS_DELAY_MS);
         }
       }
      
@@ -149,8 +153,8 @@ void activateMotorsByUnits(unsigned int motorDesig, int diffInUnits) {
       else {
         while (diffInUnits > 0) {
           if (localTimeDateMonthYearHand[MINUTE] % 6 == 1 && localTimeDateMonthYear[MINUTE] <= 30)
-            minStepper.step(MIN_UNIT_STEPS - 1); // fine adjustment
-          else if (localTimeDateMonthYearHand[MINUTE] % 3 == 1 && localTimeDateMonthYear[MINUTE] > 30)
+            minStepper.step(MIN_UNIT_STEPS + 1); // fine adjustment
+          else if (localTimeDateMonthYearHand[MINUTE] % 2 == 1 && localTimeDateMonthYear[MINUTE] > 30)
             minStepper.step(MIN_UNIT_STEPS + 1); // fine adjustment
           else
             minStepper.step(MIN_UNIT_STEPS);
@@ -158,10 +162,9 @@ void activateMotorsByUnits(unsigned int motorDesig, int diffInUnits) {
           diffInUnits--;
           localTimeDateMonthYearHand[MINUTE] = localTimeDateMonthYear[MINUTE] - diffInUnits;
           if (localTimeDateMonthYearHand[MINUTE] < 0) localTimeDateMonthYearHand[MINUTE] += 60;
+          delay(STEPPER_MOVE_HANDS_DELAY_MS);
         }
       }
-
-      
 
       // turn off the stepper to save power
       digitalWrite(MIN_PIN1, LOW);
@@ -178,14 +181,21 @@ void activateMotorsByUnits(unsigned int motorDesig, int diffInUnits) {
           dateStepper.step(-1); // reverse till day-1 position
           delay(STEPPER_CONF_DELAY_MS);
         }
+        localTimeDateMonthYearHand[DATE] = 1; // Now the hand should point date 1
+        diffInUnits = localTimeDateMonthYear[DATE] - localTimeDateMonthYearHand[DATE]; // re-calculate diffInUnits
+        activateMotorsByUnits(DATE_MOT, diffInUnits); // recursive call, but only once (because diffInUnits is non-negative now)
       }
-      else // Normal cases with no month change. The hand advances
-        dateStepper.step(DATE_UNIT_STEPS * diffInUnits);
+      else {  // Normal cases with no month change. The hand advances
+        while (diffInUnits > 0) {
+          dateStepper.step(DATE_UNIT_STEPS);
+          diffInUnits--;
+          localTimeDateMonthYearHand[DATE] = localTimeDateMonthYear[DATE] - diffInUnits;
+          delay(STEPPER_MOVE_HANDS_DELAY_MS);
+        }
+      }
 
-      diffInUnits = 0;
-      localTimeDateMonthYearHand[DATE] = localTimeDateMonthYear[DATE]; // Update hand position
-
-      digitalWrite(DATE_PIN1, LOW); // turn off the stepper to save power
+      // turn off the stepper to save power
+      digitalWrite(DATE_PIN1, LOW); 
       digitalWrite(DATE_PIN2, LOW);
       digitalWrite(DATE_PIN3, LOW);
       digitalWrite(DATE_PIN4, LOW);
@@ -218,21 +228,7 @@ void moveHands() {
     activateMotorsByUnits(DATE_MOT, dateDiff); // Date is little tricky to handle. Offload it to another function.
 }
 
-
-void testMoveHands() { // set localTimeDateMonthYear in various manner to test moveHands
-  // two rounds of minute hand
-  for (int moveCount = 120; moveCount > 0; moveCount--) {
-    localTimeDateMonthYear[MINUTE] = (localTimeDateMonthYearHand[MINUTE] + 1) % 60;
-    if (debugMask & 0x100)
-      serialPrintf("[Before moveHands] curr minute: %d, hand minute: %d\n", localTimeDateMonthYear[MINUTE], localTimeDateMonthYearHand[MINUTE]);
-    
-    moveHands();
-    if (debugMask & 0x100)
-      serialPrintf("[After moveHands] curr minute: %d, hand minute: %d\n", localTimeDateMonthYear[MINUTE], localTimeDateMonthYearHand[MINUTE]);
-    
-    delay(1000);
-  }
-
+void testHourHand() {
   // two rounds of hour hand
   for (int moveCount = 24; moveCount > 0; moveCount--) {
     localTimeDateMonthYear[HOUR] = (localTimeDateMonthYearHand[HOUR] + 1) % 12;
@@ -242,11 +238,24 @@ void testMoveHands() { // set localTimeDateMonthYear in various manner to test m
     moveHands();
     if (debugMask & 0x100)
       serialPrintf("[After moveHands] curr hour: %d, hand hour: %d\n", localTimeDateMonthYear[HOUR], localTimeDateMonthYearHand[HOUR]);
-    
-    delay(1000);
   }
+}
 
-  // // two roundtrip of date hand
+void testMinuteHand() {
+  // two rounds of minute hand
+  for (int moveCount = 120; moveCount > 0; moveCount--) {
+    localTimeDateMonthYear[MINUTE] = (localTimeDateMonthYearHand[MINUTE] + 1) % 60;
+    if (debugMask & 0x100)
+      serialPrintf("[Before moveHands] curr minute: %d, hand minute: %d\n", localTimeDateMonthYear[MINUTE], localTimeDateMonthYearHand[MINUTE]);
+    
+    moveHands();
+    if (debugMask & 0x100)
+      serialPrintf("[After moveHands] curr minute: %d, hand minute: %d\n", localTimeDateMonthYear[MINUTE], localTimeDateMonthYearHand[MINUTE]);
+  }
+}
+
+void testDateHand() {
+  // two roundtrip of date hand
   for (int moveCount = 62; moveCount > 0; moveCount--) {
     localTimeDateMonthYear[DATE] = max((localTimeDateMonthYearHand[DATE] + 1) % 32, 1); // there's no date 0
     if (debugMask & 0x100)
@@ -255,10 +264,7 @@ void testMoveHands() { // set localTimeDateMonthYear in various manner to test m
     moveHands();
     if (debugMask & 0x100)
       serialPrintf("[After moveHands] curr date: %d, hand date: %d\n", localTimeDateMonthYear[DATE], localTimeDateMonthYearHand[DATE]);
-    
-    delay(1000);
   }
-
 }
 
 // GPS
@@ -408,7 +414,6 @@ void refineLocalTimeDateMonthYear() {
                   localTimeDateMonthYear[YEAR]);
 }
 
-/*
 void testRefineLocalTimeDateMonthYear() {
 // boundry condition check
   serialPrintf("[JAN]\n");
@@ -627,10 +632,14 @@ void testRefineLocalTimeDateMonthYear() {
   localTimeDateMonthYear[YEAR] = 2000;
   refineLocalTimeDateMonthYear();
 }
-*/
 
 void processNmeaMsg(const char* nmeaMsg) {
   unsigned int nmeaMsgLen = strlen(nmeaMsg);
+  int tempLocalHour = 0; // temporary holders for extracted NMEA msgs
+  int tempLocalMinute = 0;
+  int tempLocalDate = 1;
+  int tempLocalMonth = 1;
+  int tempLocalYear = 2023;
   
   // filter out incorrect and non-ZDA msgs
   if (
@@ -679,9 +688,8 @@ void processNmeaMsg(const char* nmeaMsg) {
       strncpy(utcHh, zdaField, 2); strncpy(utcMm, zdaField+2, 2);
       utcHh[2] = '\0'; utcMm[2] = '\0'; // null termination
 
-      localTimeDateMonthYear[HOUR] = atoi(utcHh) + localOffset2Utc; // temporary value (may be negative or above 23)
-
-      localTimeDateMonthYear[MINUTE] = atoi(utcMm); // this is ultimate (UTC min == local min always)
+      tempLocalHour = atoi(utcHh) + localOffset2Utc; // temporary value (may be negative or above 23)
+      tempLocalMinute = atoi(utcMm); // though minute value is ultimate (UTC min == local min always) hold it till other values to be collected
     }
     else if (zdaFieldIdx == ZDA_UTC_DATE_FIELD_IDX) { // parse UTC date. date value is still to be refined
       if (strlen(zdaField) != 2) {
@@ -693,7 +701,7 @@ void processNmeaMsg(const char* nmeaMsg) {
       strncpy(utcDate, zdaField, 2);
       utcDate[2] = '\0';
 
-      localTimeDateMonthYear[DATE] = atoi(utcDate); // temporary value
+      tempLocalDate = atoi(utcDate); // temporary value
     }
     else if (zdaFieldIdx == ZDA_UTC_MONTH_FIELD_IDX) { // parse UTC month. month value is still to be refined
       if (strlen(zdaField) != 2) {
@@ -705,7 +713,7 @@ void processNmeaMsg(const char* nmeaMsg) {
       strncpy(utcMonth, zdaField, 2);
       utcMonth[2] = '\0';
 
-      localTimeDateMonthYear[MONTH] = atoi(utcMonth); // temporary value
+      tempLocalMonth = atoi(utcMonth); // temporary value
     }
     else if (zdaFieldIdx == ZDA_UTC_YEAR_FIELD_IDX) { // parse UTC year. year value is still to be refined
       if (strlen(zdaField) != 4) {
@@ -717,7 +725,7 @@ void processNmeaMsg(const char* nmeaMsg) {
       strncpy(utcYear, zdaField, 4);
       utcYear[4] = '\0';
 
-      localTimeDateMonthYear[YEAR] = atoi(utcYear); // temporary value
+      tempLocalYear = atoi(utcYear); // temporary value
     }
     else if (zdaFieldIdx > ZDA_UTC_YEAR_FIELD_IDX)
       break; // not interested in values after UTC year
@@ -737,7 +745,13 @@ void processNmeaMsg(const char* nmeaMsg) {
                   localTimeDateMonthYear[DATE],
                   localTimeDateMonthYear[MONTH],
                   localTimeDateMonthYear[YEAR]);
-    // refine local time values
+    
+    // copy extracted NMEA msgs from temp holders to global variables, then refine them
+    localTimeDateMonthYear[HOUR] = tempLocalHour;
+    localTimeDateMonthYear[MINUTE] = tempLocalMinute;
+    localTimeDateMonthYear[DATE] = tempLocalDate;
+    localTimeDateMonthYear[MONTH] = tempLocalMonth;
+    localTimeDateMonthYear[YEAR] = tempLocalYear;
     refineLocalTimeDateMonthYear();
 }
 
@@ -790,7 +804,10 @@ void setup() {
   delay(2000);
 
   // Test codes
-  // testMoveHands();
+  if (testMask & 0x01) testRefineLocalTimeDateMonthYear();
+  if (testMask & 0x02) testHourHand();
+  if (testMask & 0x04) testMinuteHand();
+  if (testMask & 0x08) testDateHand();
 }
 
 void loop() {
