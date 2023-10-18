@@ -36,10 +36,14 @@ To take up the cases that the hands should move more than one unit (i.e. the dif
 
 ## Schematic 3D modeling
 ![gpsClock Schematic](/images/gpsClockSchematic.svg)
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/5qHVLQV69g6" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 ## Clock frame and other hardware
+### 3D model of clock frame and hands 
+All models are drawn by [Tinkercad](https://www.tinkercad.com/). For CNC works or 3D printing, you can download STL files in Tinkercad pages.
+* Assembed view: https://www.tinkercad.com/things/5qHVLQV69g6?sharecode=M-N8xg26T4Tp7vN6dTPjyoYMho2iMjWcLH_KvJiNK8Y
 * Front and back plate: https://www.tinkercad.com/things/elm0u6JZKUI?sharecode=4npgwWMFvZ8sjh_XxynUjGjd_OhpR7mrLe-HZ6zU8vI
 * Hands: https://www.tinkercad.com/things/gcw43MZUidC?sharecode=QKOi6mAoi5HatGKXw9UPfKnBdrYteMXhOlwsAzMnTao
+
+### List of hardware with description
 
 ## Video
