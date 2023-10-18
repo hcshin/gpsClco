@@ -34,7 +34,7 @@ else
 Here `localTimeDateMonthYearHand[MINUTE]` represents current minute hand position, and `minStepper.step(...)` moves the stepper motor for the minute hand. The key idea here is to derive integer number of steps that can best represent natual movement of the minute hand because the stepper motor cannot move less than one step (N.B. I did not consider microstepping because the adopted stepper motors---28BYJ-48---were quite inaccurate even when it moved by integer steps). The branch is mainly composed of two parts: one for moving the hand within the first semicircle (i.e. 0--30 min.) and the other for the second one so that the number of steps can be taken differently depending on whether the hand is descending or ascending. The conditions with the remainder operator makes up a practical non-integer number of steps for moving the hand, which would be a fine adjustment.
 To take up the cases that the hands should move more than one unit (i.e. the differences between the local time and current hand position is not one. The above conditional statement is inside an external loop which reduces the difference by one at a time until it gets to zero.
 
-## Schematic 3D modeling
+## Schematic
 ![gpsClock Schematic](/images/gpsClockSchematic.svg)
 
 ## Clock frame and other hardware
