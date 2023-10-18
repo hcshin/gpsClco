@@ -152,9 +152,9 @@ void activateMotorsByUnits(unsigned int motorDesig, int diffInUnits) {
       }
       else {
         while (diffInUnits > 0) {
-          if (localTimeDateMonthYearHand[MINUTE] % 6 == 1 && localTimeDateMonthYear[MINUTE] <= 30)
+          if (localTimeDateMonthYearHand[MINUTE] % 6 == 1 && localTimeDateMonthYearHand[MINUTE] <= 30)
             minStepper.step(MIN_UNIT_STEPS + 1); // fine adjustment
-          else if (localTimeDateMonthYearHand[MINUTE] % 2 == 1 && localTimeDateMonthYear[MINUTE] > 30)
+          else if (localTimeDateMonthYearHand[MINUTE] % 2 == 1 && localTimeDateMonthYearHand[MINUTE] > 30)
             minStepper.step(MIN_UNIT_STEPS + 1); // fine adjustment
           else
             minStepper.step(MIN_UNIT_STEPS);

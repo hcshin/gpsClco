@@ -1,0 +1,1878 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1601" height="1406"> <style xmlns="http://www.w3.org/1999/xhtml">
+        
+ .M athJax_Hover_Frame {
+ border-radius: .25em;
+
+        -webkit-border-radius: .25em;
+ -moz-border-radius: .25em;
+
+        -khtml-border-radius: .25em;
+ box-shadow: 0px 0px 15px #83A;
+
+        -webkit-box-shadow: 0px 0px 15px #83A;
+ -moz-box-shadow: 0px 0px
+        15px #83A;
+ -khtml-box-shadow: 0px 0px 15px #83A;
+ border: 1px
+        solid #A6D ! important;
+ display: inline-block;
+ position:
+        absolute
+ }
+
+ .MathJax_Menu_Button .MathJax_Hover_Arrow {
+
+        position: absolute;
+ cursor: pointer;
+ display: inline-block;
+
+        border: 2px solid #AAA;
+ border-radius: 4px;
+
+        -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+
+        -khtml-border-radius: 4px;
+ font-family: 'Courier New',
+        Courier;
+ font-size: 9px;
+ color: #F0F0F0
+ }
+
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+ display: block;
+
+        background-color: #AAA;
+ border: 1px solid;
+ border-radius:
+        3px;
+ line-height: 0;
+ padding: 4px
+ }
+
+
+        .MathJax_Hover_Arrow:hover {
+ color: white !important;
+ border:
+        2px solid #CCC !important
+ }
+
+ .MathJax_Hover_Arrow:hover
+        span {
+ background-color: #CCC !important
+ }
+
+
+
+        #MathJax_About {
+ position: fixed;
+ left: 50%;
+ width:
+        auto;
+ text-align: center;
+ border: 3px outset;
+ padding:
+        1em 2em;
+ background-color: #DDDDDD;
+ color: black;
+
+        cursor: default;
+ font-family: message-box;
+ font-size: 120%;
+
+        font-style: normal;
+ text-indent: 0;
+ text-transform: none;
+
+        line-height: normal;
+ letter-spacing: normal;
+ word-spacing:
+        normal;
+ word-wrap: normal;
+ white-space: nowrap;
+ float:
+        none;
+ z-index: 201;
+ border-radius: 15px;
+
+        -webkit-border-radius: 15px;
+ -moz-border-radius: 15px;
+
+        -khtml-border-radius: 15px;
+ box-shadow: 0px 10px 20px #808080;
+
+        -webkit-box-shadow: 0px 10px 20px #808080;
+ -moz-box-shadow: 0px
+        10px 20px #808080;
+ -khtml-box-shadow: 0px 10px 20px #808080;
+
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color='gray', Positive='true')
+ }
+
+
+        #MathJax_About.MathJax_MousePost {
+ outline: none
+ }
+
+
+        .MathJax_Menu {
+ position: absolute;
+ background-color: white;
+
+        color: black;
+ width: auto;
+ padding: 2px;
+ border: 1px
+        solid #CCCCCC;
+ margin: 0;
+ cursor: default;
+ font: menu;
+
+        text-align: left;
+ text-indent: 0;
+ text-transform: none;
+
+        line-height: normal;
+ letter-spacing: normal;
+ word-spacing:
+        normal;
+ word-wrap: normal;
+ white-space: nowrap;
+ float:
+        none;
+ z-index: 201;
+ box-shadow: 0px 10px 20px #808080;
+
+        -webkit-box-shadow: 0px 10px 20px #808080;
+ -moz-box-shadow: 0px
+        10px 20px #808080;
+ -khtml-box-shadow: 0px 10px 20px #808080;
+
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color='gray', Positive='true')
+ }
+
+
+        .MathJax_MenuItem {
+ padding: 2px 2em;
+ background: transparent
+
+        }
+
+ .MathJax_MenuArrow {
+ position: absolute;
+ right:
+        .5em;
+ padding-top: .25em;
+ color: #666666;
+ font-size:
+        .75em
+ }
+
+ .MathJax_MenuActive .MathJax_MenuArrow {
+
+        color: white
+ }
+
+ .MathJax_MenuArrow.RTL {
+ left: .5em;
+
+        right: auto
+ }
+
+ .MathJax_MenuCheck {
+ position:
+        absolute;
+ left: .7em
+ }
+
+ .MathJax_MenuCheck.RTL {
+
+        right: .7em;
+ left: auto
+ }
+
+ .MathJax_MenuRadioCheck {
+
+        position: absolute;
+ left: 1em
+ }
+
+
+        .MathJax_MenuRadioCheck.RTL {
+ right: 1em;
+ left: auto
+ }
+
+
+        .MathJax_MenuLabel {
+ padding: 2px 2em 4px 1.33em;
+ font-style:
+        italic
+ }
+
+ .MathJax_MenuRule {
+ border-top: 1px solid
+        #CCCCCC;
+ margin: 4px 1px 0px
+ }
+
+
+        .MathJax_MenuDisabled {
+ color: GrayText
+ }
+
+
+        .MathJax_MenuActive {
+ background-color: Highlight;
+ color:
+        HighlightText
+ }
+
+ .MathJax_MenuDisabled:focus,
+        .MathJax_MenuLabel:focus {
+ background-color: #E8E8E8
+ }
+
+
+        .MathJax_ContextMenu:focus {
+ outline: none
+ }
+
+
+        .MathJax_ContextMenu .MathJax_MenuItem:focus {
+ outline: none
+
+        }
+
+ #MathJax_AboutClose {
+ top: .2em;
+ right: .2em
+
+        }
+
+ .MathJax_Menu .MathJax_MenuClose {
+ top: -10px;
+
+        left: -10px
+ }
+
+ .MathJax_MenuClose {
+ position:
+        absolute;
+ cursor: pointer;
+ display: inline-block;
+
+        border: 2px solid #AAA;
+ border-radius: 18px;
+
+        -webkit-border-radius: 18px;
+ -moz-border-radius: 18px;
+
+        -khtml-border-radius: 18px;
+ font-family: 'Courier New',
+        Courier;
+ font-size: 24px;
+ color: #F0F0F0
+ }
+
+
+        .MathJax_MenuClose span {
+ display: block;
+ background-color:
+        #AAA;
+ border: 1.5px solid;
+ border-radius: 18px;
+
+        -webkit-border-radius: 18px;
+ -moz-border-radius: 18px;
+
+        -khtml-border-radius: 18px;
+ line-height: 0;
+ padding: 8px 0
+        6px
+ }
+
+ .MathJax_MenuClose:hover {
+ color: white
+        !important;
+ border: 2px solid #CCC !important
+ }
+
+
+        .MathJax_MenuClose:hover span {
+ background-color: #CCC !important
+
+        }
+
+ .MathJax_MenuClose:hover:focus {
+ outline: none
+ }
+
+
+        .MathJax_Preview .MJXf-math {
+ color: inherit !important
+ }
+
+
+        .MJX_Assistive_MathML {
+ position: absolute !important;
+ top:
+        0;
+ left: 0;
+ clip: rect(1px, 1px, 1px, 1px);
+ padding: 1px
+        0 0 0 !important;
+ border: 0 !important;
+ height: 1px
+        !important;
+ width: 1px !important;
+ overflow: hidden
+        !important;
+ display: block !important;
+ -webkit-touch-callout:
+        none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+
+        -moz-user-select: none;
+ -ms-user-select: none;
+ user-select:
+        none
+ }
+
+ .MJX_Assistive_MathML.MJX_Assistive_MathML_Block
+        {
+ width: 100% !important
+ }
+
+ #MathJax_Zoom {
+
+        position: absolute;
+ background-color: #F0F0F0;
+ overflow:
+        auto;
+ display: block;
+ z-index: 301;
+ padding: .5em;
+
+        border: 1px solid black;
+ margin: 0;
+ font-weight: normal;
+
+        font-style: normal;
+ text-align: left;
+ text-indent: 0;
+
+        text-transform: none;
+ line-height: normal;
+ letter-spacing:
+        normal;
+ word-spacing: normal;
+ word-wrap: normal;
+
+        white-space: nowrap;
+ float: none;
+ -webkit-box-sizing:
+        content-box;
+ -moz-box-sizing: content-box;
+ box-sizing:
+        content-box;
+ box-shadow: 5px 5px 15px #AAAAAA;
+
+        -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+ -moz-box-shadow: 5px 5px
+        15px #AAAAAA;
+ -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color='gray', Positive='true')
+ }
+
+
+        #MathJax_ZoomOverlay {
+ position: absolute;
+ left: 0;
+ top:
+        0;
+ z-index: 300;
+ display: inline-block;
+ width: 100%;
+
+        height: 100%;
+ border: 0;
+ padding: 0;
+ margin: 0;
+
+        background-color: white;
+ opacity: 0;
+ filter: alpha(opacity=0)
+
+        }
+
+ #MathJax_ZoomFrame {
+ position: relative;
+ display:
+        inline-block;
+ height: 0;
+ width: 0
+ }
+
+
+        #MathJax_ZoomEventTrap {
+ position: absolute;
+ left: 0;
+
+        top: 0;
+ z-index: 302;
+ display: inline-block;
+ border: 0;
+
+        padding: 0;
+ margin: 0;
+ background-color: white;
+ opacity:
+        0;
+ filter: alpha(opacity=0)
+ }
+
+ .MathJax_Preview {
+
+        color: #888
+ }
+
+ #MathJax_Message {
+ position: fixed;
+
+        left: 1em;
+ bottom: 1.5em;
+ background-color: #E6E6E6;
+
+        border: 1px solid #959595;
+ margin: 0px;
+ padding: 2px 8px;
+
+        z-index: 102;
+ color: black;
+ font-size: 80%;
+ width: auto;
+
+        white-space: nowrap
+ }
+
+ #MathJax_MSIE_Frame {
+
+        position: absolute;
+ top: 0;
+ left: 0;
+ width: 0px;
+
+        z-index: 101;
+ border: 0px;
+ margin: 0px;
+ padding: 0px
+
+        }
+
+ .MathJax_Error {
+ color: #CC0000;
+ font-style:
+        italic
+ }
+
+ .MJXp-script {
+ font-size: .8em
+ }
+
+
+        .MJXp-right {
+ -webkit-transform-origin: right;
+
+        -moz-transform-origin: right;
+ -ms-transform-origin: right;
+
+        -o-transform-origin: right;
+ transform-origin: right
+ }
+
+
+        .MJXp-bold {
+ font-weight: bold
+ }
+
+ .MJXp-italic {
+
+        font-style: italic
+ }
+
+ .MJXp-scr {
+ font-family:
+        MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+
+        }
+
+ .MJXp-frak {
+ font-family: MathJax_Fraktur, 'Times
+        New Roman', Times, STIXGeneral, serif
+ }
+
+ .MJXp-sf {
+
+        font-family: MathJax_SansSerif, 'Times New Roman', Times,
+        STIXGeneral, serif
+ }
+
+ .MJXp-cal {
+ font-family:
+        MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral,
+        serif
+ }
+
+ .MJXp-mono {
+ font-family:
+        MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral,
+        serif
+ }
+
+ .MJXp-largeop {
+ font-size: 150%
+ }
+
+
+        .MJXp-largeop.MJXp-int {
+ vertical-align: -.2em
+ }
+
+
+        .MJXp-math {
+ display: inline-block;
+ line-height: 1.2;
+
+        text-indent: 0;
+ font-family: 'Times New Roman', Times,
+        STIXGeneral, serif;
+ white-space: nowrap;
+ border-collapse:
+        collapse
+ }
+
+ .MJXp-display {
+ display: block;
+
+        text-align: center;
+ margin: 1em 0
+ }
+
+ .MJXp-math span
+        {
+ display: inline-block
+ }
+
+ .MJXp-box {
+ display:
+        block !important;
+ text-align: center
+ }
+
+
+        .MJXp-box:after {
+ content: " "
+ }
+
+ .MJXp-rule {
+
+        display: block !important;
+ margin-top: .1em
+ }
+
+
+        .MJXp-char {
+ display: block !important
+ }
+
+ .MJXp-mo {
+
+        margin: 0 .15em
+ }
+
+ .MJXp-mfrac {
+ margin: 0 .125em;
+
+        vertical-align: .25em
+ }
+
+ .MJXp-denom {
+ display:
+        inline-table !important;
+ width: 100%
+ }
+
+ .MJXp-denom&gt;
+        * {
+ display: table-row !important
+ }
+
+ .MJXp-surd {
+
+        vertical-align: top
+ }
+
+ .MJXp-surd&gt; * {
+ display:
+        block !important
+ }
+
+ .MJXp-script-box&gt; * {
+
+        display: table !important;
+ height: 50%
+ }
+
+
+        .MJXp-script-box&gt; *&gt; * {
+ display: table-cell !important;
+
+        vertical-align: top
+ }
+
+ .MJXp-script-box&gt; *:last-child&gt;
+        * {
+ vertical-align: bottom
+ }
+
+ .MJXp-script-box&gt; *&gt;
+        *&gt; * {
+ display: block !important
+ }
+
+
+        .MJXp-mphantom {
+ visibility: hidden
+ }
+
+
+        .MJXp-munderover, .MJXp-munder {
+ display: inline-table !important
+
+        }
+
+ .MJXp-over {
+ display: inline-block !important;
+
+        text-align: center
+ }
+
+ .MJXp-over&gt; * {
+ display:
+        block !important
+ }
+
+ .MJXp-munderover&gt; *, .MJXp-munder&gt;
+        * {
+ display: table-row !important
+ }
+
+ .MJXp-mtable {
+
+        vertical-align: .25em;
+ margin: 0 .125em
+ }
+
+
+        .MJXp-mtable&gt; * {
+ display: inline-table !important;
+
+        vertical-align: middle
+ }
+
+ .MJXp-mtr {
+ display:
+        table-row !important
+ }
+
+ .MJXp-mtd {
+ display:
+        table-cell !important;
+ text-align: center;
+ padding: .5em 0 0
+        .5em
+ }
+
+ .MJXp-mtr&gt; .MJXp-mtd:first-child {
+
+        padding-left: 0
+ }
+
+ .MJXp-mtr:first-child&gt; .MJXp-mtd {
+
+        padding-top: 0
+ }
+
+ .MJXp-mlabeledtr {
+ display:
+        table-row !important
+ }
+
+ .MJXp-mlabeledtr&gt;
+        .MJXp-mtd:first-child {
+ padding-left: 0
+ }
+
+
+        .MJXp-mlabeledtr:first-child&gt; .MJXp-mtd {
+ padding-top: 0
+ }
+
+
+        .MJXp-merror {
+ background-color: #FFFF88;
+ color: #CC0000;
+
+        border: 1px solid #CC0000;
+ padding: 1px 3px;
+ font-style:
+        normal;
+ font-size: 90%
+ }
+
+ .MJXp-scale0 {
+
+        -webkit-transform: scaleX(.0);
+ -moz-transform: scaleX(.0);
+
+        -ms-transform: scaleX(.0);
+ -o-transform: scaleX(.0);
+
+        transform: scaleX(.0)
+ }
+
+ .MJXp-scale1 {
+
+        -webkit-transform: scaleX(.1);
+ -moz-transform: scaleX(.1);
+
+        -ms-transform: scaleX(.1);
+ -o-transform: scaleX(.1);
+
+        transform: scaleX(.1)
+ }
+
+ .MJXp-scale2 {
+
+        -webkit-transform: scaleX(.2);
+ -moz-transform: scaleX(.2);
+
+        -ms-transform: scaleX(.2);
+ -o-transform: scaleX(.2);
+
+        transform: scaleX(.2)
+ }
+
+ .MJXp-scale3 {
+
+        -webkit-transform: scaleX(.3);
+ -moz-transform: scaleX(.3);
+
+        -ms-transform: scaleX(.3);
+ -o-transform: scaleX(.3);
+
+        transform: scaleX(.3)
+ }
+
+ .MJXp-scale4 {
+
+        -webkit-transform: scaleX(.4);
+ -moz-transform: scaleX(.4);
+
+        -ms-transform: scaleX(.4);
+ -o-transform: scaleX(.4);
+
+        transform: scaleX(.4)
+ }
+
+ .MJXp-scale5 {
+
+        -webkit-transform: scaleX(.5);
+ -moz-transform: scaleX(.5);
+
+        -ms-transform: scaleX(.5);
+ -o-transform: scaleX(.5);
+
+        transform: scaleX(.5)
+ }
+
+ .MJXp-scale6 {
+
+        -webkit-transform: scaleX(.6);
+ -moz-transform: scaleX(.6);
+
+        -ms-transform: scaleX(.6);
+ -o-transform: scaleX(.6);
+
+        transform: scaleX(.6)
+ }
+
+ .MJXp-scale7 {
+
+        -webkit-transform: scaleX(.7);
+ -moz-transform: scaleX(.7);
+
+        -ms-transform: scaleX(.7);
+ -o-transform: scaleX(.7);
+
+        transform: scaleX(.7)
+ }
+
+ .MJXp-scale8 {
+
+        -webkit-transform: scaleX(.8);
+ -moz-transform: scaleX(.8);
+
+        -ms-transform: scaleX(.8);
+ -o-transform: scaleX(.8);
+
+        transform: scaleX(.8)
+ }
+
+ .MJXp-scale9 {
+
+        -webkit-transform: scaleX(.9);
+ -moz-transform: scaleX(.9);
+
+        -ms-transform: scaleX(.9);
+ -o-transform: scaleX(.9);
+
+        transform: scaleX(.9)
+ }
+
+ .MathJax_PHTML .noError {
+
+        vertical-align: ;
+ font-size: 90%;
+ text-align: left;
+
+        color: black;
+ padding: 1px 3px;
+ border: 1px solid
+ }
+
+
+        .mjx-chtml {
+ display: inline-block;
+ line-height: 0;
+
+        text-indent: 0;
+ text-align: left;
+ text-transform: none;
+
+        font-style: normal;
+ font-weight: normal;
+ font-size: 100%;
+
+        font-size-adjust: none;
+ letter-spacing: normal;
+ word-wrap:
+        normal;
+ word-spacing: normal;
+ white-space: nowrap;
+
+        float: none;
+ direction: ltr;
+ max-width: none;
+
+        max-height: none;
+ min-width: 0;
+ min-height: 0;
+ border:
+        0;
+ margin: 0;
+ padding: 1px 0
+ }
+
+ .MJXc-display {
+
+        display: block;
+ text-align: center;
+ margin: 1em 0;
+
+        padding: 0
+ }
+
+ .mjx-chtml[tabindex]:focus, body :focus
+        .mjx-chtml[tabindex] {
+ display: inline-table
+ }
+
+
+        .mjx-full-width {
+ text-align: center;
+ display: table-cell
+        !important;
+ width: 10000em
+ }
+
+ .mjx-math {
+
+        display: inline-block;
+ border-collapse: separate;
+
+        border-spacing: 0
+ }
+
+ .mjx-math * {
+ display:
+        inline-block;
+ -webkit-box-sizing: content-box !important;
+
+        -moz-box-sizing: content-box !important;
+ box-sizing: content-box
+        !important;
+ text-align: left
+ }
+
+ .mjx-numerator {
+
+        display: block;
+ text-align: center
+ }
+
+
+        .mjx-denominator {
+ display: block;
+ text-align: center
+ }
+
+
+        .MJXc-stacked {
+ height: 0;
+ position: relative
+ }
+
+
+        .MJXc-stacked&gt; * {
+ position: absolute
+ }
+
+
+        .MJXc-bevelled&gt; * {
+ display: inline-block
+ }
+
+
+        .mjx-stack {
+ display: inline-block
+ }
+
+ .mjx-op {
+
+        display: block
+ }
+
+ .mjx-under {
+ display: table-cell
+
+        }
+
+ .mjx-over {
+ display: block
+ }
+
+ .mjx-over&gt;
+        * {
+ padding-left: 0px !important;
+ padding-right: 0px
+        !important
+ }
+
+ .mjx-under&gt; * {
+ padding-left: 0px
+        !important;
+ padding-right: 0px !important
+ }
+
+
+        .mjx-stack&gt; .mjx-sup {
+ display: block
+ }
+
+
+        .mjx-stack&gt; .mjx-sub {
+ display: block
+ }
+
+
+        .mjx-prestack&gt; .mjx-presup {
+ display: block
+ }
+
+
+        .mjx-prestack&gt; .mjx-presub {
+ display: block
+ }
+
+
+        .mjx-delim-h&gt; .mjx-char {
+ display: inline-block
+ }
+
+
+        .mjx-surd {
+ vertical-align: top
+ }
+
+ .mjx-mphantom * {
+
+        visibility: hidden
+ }
+
+ .mjx-merror {
+
+        background-color: #FFFF88;
+ color: #CC0000;
+ border: 1px solid
+        #CC0000;
+ padding: 2px 3px;
+ font-style: normal;
+
+        font-size: 90%
+ }
+
+ .mjx-annotation-xml {
+ line-height:
+        normal
+ }
+
+ .mjx-menclose&gt; svg {
+ fill: none;
+
+        stroke: currentColor
+ }
+
+ .mjx-mtr {
+ display:
+        table-row
+ }
+
+ .mjx-mlabeledtr {
+ display: table-row
+
+        }
+
+ .mjx-mtd {
+ display: table-cell;
+ text-align:
+        center
+ }
+
+ .mjx-label {
+ display: table-row
+ }
+
+
+        .mjx-box {
+ display: inline-block
+ }
+
+ .mjx-block {
+
+        display: block
+ }
+
+ .mjx-span {
+ display: inline
+ }
+
+
+        .mjx-char {
+ display: block;
+&lt;!-- white-space: pre--&gt;&lt;!--
+        Remove this because it keeps white spaces in exported SVGs, which makes
+        the texts very long --&gt;
+ }
+
+ .mjx-itable {
+ display:
+        inline-table;
+ width: auto
+ }
+
+ .mjx-row {
+
+        display: table-row
+ }
+
+ .mjx-cell {
+ display:
+        table-cell
+ }
+
+ .mjx-table {
+ display: table;
+
+        width: 100%
+ }
+
+ .mjx-line {
+ display: block;
+
+        height: 0
+ }
+
+ .mjx-strut {
+ width: 0;
+
+        padding-top: 1em
+ }
+
+ .mjx-vsize {
+ width: 0
+ }
+
+
+        .MJXc-space1 {
+ margin-left: .167em
+ }
+
+ .MJXc-space2 {
+
+        margin-left: .222em
+ }
+
+ .MJXc-space3 {
+ margin-left:
+        .278em
+ }
+
+ .mjx-chartest {
+ display: block;
+
+        visibility: hidden;
+ position: absolute;
+ top: 0;
+
+        line-height: normal;
+ font-size: 500%
+ }
+
+
+        .mjx-chartest .mjx-char {
+ display: inline
+ }
+
+
+        .mjx-chartest .mjx-box {
+ padding-top: 1000px
+ }
+
+
+        .MJXc-processing {
+ visibility: hidden;
+ position: fixed;
+
+        width: 0;
+ height: 0;
+ overflow: hidden
+ }
+
+
+        .MJXc-processed {
+ display: none
+ }
+
+ .mjx-test {
+
+        font-style: normal;
+ font-weight: normal;
+ font-size: 100%;
+
+        font-size-adjust: none;
+ text-indent: 0;
+ text-transform: none;
+
+        letter-spacing: normal;
+ word-spacing: normal;
+ overflow:
+        hidden;
+ height: 1px
+ }
+
+ .mjx-test.mjx-test-display {
+
+        display: table !important
+ }
+
+ .mjx-test.mjx-test-inline {
+
+        display: inline !important;
+ margin-right: -1px
+ }
+
+
+        .mjx-test.mjx-test-default {
+ display: block !important;
+
+        clear: both
+ }
+
+ .mjx-ex-box {
+ display: inline-block
+        !important;
+ position: absolute;
+ overflow: hidden;
+
+        min-height: 0;
+ max-height: none;
+ padding: 0;
+ border: 0;
+
+        margin: 0;
+ width: 1px;
+ height: 60ex
+ }
+
+
+        .mjx-test-inline .mjx-left-box {
+ display: inline-block;
+
+        width: 0;
+ float: left
+ }
+
+ .mjx-test-inline
+        .mjx-right-box {
+ display: inline-block;
+ width: 0;
+ float:
+        right
+ }
+
+ .mjx-test-display .mjx-right-box {
+ display:
+        table-cell !important;
+ width: 10000em !important;
+ min-width:
+        0;
+ max-width: none;
+ padding: 0;
+ border: 0;
+ margin:
+        0
+ }
+
+ #MathJax_CHTML_Tooltip {
+ background-color:
+        InfoBackground;
+ color: InfoText;
+ border: 1px solid black;
+
+        box-shadow: 2px 2px 5px #AAAAAA;
+ -webkit-box-shadow: 2px 2px 5px
+        #AAAAAA;
+ -moz-box-shadow: 2px 2px 5px #AAAAAA;
+
+        -khtml-box-shadow: 2px 2px 5px #AAAAAA;
+ padding: 3px 4px;
+
+        z-index: 401;
+ position: absolute;
+ left: 0;
+ top: 0;
+
+        width: auto;
+ height: auto;
+ display: none
+ }
+
+
+        .mjx-chtml .mjx-noError {
+ line-height: 1.2;
+ vertical-align: ;
+
+        font-size: 90%;
+ text-align: left;
+ color: black;
+ padding:
+        1px 3px;
+ border: 1px solid
+ }
+
+ .MJXc-TeX-unknown-R {
+
+        font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS',
+        serif;
+ font-style: normal;
+ font-weight: normal
+ }
+
+
+        .MJXc-TeX-unknown-I {
+ font-family: STIXGeneral, 'Cambria Math',
+        'Arial Unicode MS', serif;
+ font-style: italic;
+
+        font-weight: normal
+ }
+
+ .MJXc-TeX-unknown-B {
+
+        font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS',
+        serif;
+ font-style: normal;
+ font-weight: bold
+ }
+
+
+        .MJXc-TeX-unknown-BI {
+ font-family: STIXGeneral, 'Cambria Math',
+        'Arial Unicode MS', serif;
+ font-style: italic;
+
+        font-weight: bold
+ }
+
+ .MJXc-TeX-ams-R {
+ font-family:
+        MJXc-TeX-ams-R, MJXc-TeX-ams-Rw
+ }
+
+ .MJXc-TeX-cal-B {
+
+        font-family: MJXc-TeX-cal-B, MJXc-TeX-cal-Bx, MJXc-TeX-cal-Bw
+ }
+
+
+        .MJXc-TeX-frak-R {
+ font-family: MJXc-TeX-frak-R, MJXc-TeX-frak-Rw
+
+        }
+
+ .MJXc-TeX-frak-B {
+ font-family: MJXc-TeX-frak-B,
+        MJXc-TeX-frak-Bx, MJXc-TeX-frak-Bw
+ }
+
+ .MJXc-TeX-math-BI {
+
+        font-family: MJXc-TeX-math-BI, MJXc-TeX-math-BIx, MJXc-TeX-math-BIw
+
+        }
+
+ .MJXc-TeX-sans-R {
+ font-family: MJXc-TeX-sans-R,
+        MJXc-TeX-sans-Rw
+ }
+
+ .MJXc-TeX-sans-B {
+ font-family:
+        MJXc-TeX-sans-B, MJXc-TeX-sans-Bx, MJXc-TeX-sans-Bw
+ }
+
+
+        .MJXc-TeX-sans-I {
+ font-family: MJXc-TeX-sans-I, MJXc-TeX-sans-Ix,
+        MJXc-TeX-sans-Iw
+ }
+
+ .MJXc-TeX-script-R {
+
+        font-family: MJXc-TeX-script-R, MJXc-TeX-script-Rw
+ }
+
+
+        .MJXc-TeX-type-R {
+ font-family: MJXc-TeX-type-R, MJXc-TeX-type-Rw
+
+        }
+
+ .MJXc-TeX-cal-R {
+ font-family: MJXc-TeX-cal-R,
+        MJXc-TeX-cal-Rw
+ }
+
+ .MJXc-TeX-main-B {
+ font-family:
+        MJXc-TeX-main-B, MJXc-TeX-main-Bx, MJXc-TeX-main-Bw
+ }
+
+
+        .MJXc-TeX-main-I {
+ font-family: MJXc-TeX-main-I, MJXc-TeX-main-Ix,
+        MJXc-TeX-main-Iw
+ }
+
+ .MJXc-TeX-main-R {
+ font-family:
+        MJXc-TeX-main-R, MJXc-TeX-main-Rw
+ }
+
+ .MJXc-TeX-math-I {
+
+        font-family: MJXc-TeX-math-I, MJXc-TeX-math-Ix, MJXc-TeX-math-Iw
+ }
+
+
+        .MJXc-TeX-size1-R {
+ font-family: MJXc-TeX-size1-R,
+        MJXc-TeX-size1-Rw
+ }
+
+ .MJXc-TeX-size2-R {
+
+        font-family: MJXc-TeX-size2-R, MJXc-TeX-size2-Rw
+ }
+
+
+        .MJXc-TeX-size3-R {
+ font-family: MJXc-TeX-size3-R,
+        MJXc-TeX-size3-Rw
+ }
+
+ .MJXc-TeX-size4-R {
+
+        font-family: MJXc-TeX-size4-R, MJXc-TeX-size4-Rw
+ }
+
+
+        .MJXc-TeX-vec-R {
+ font-family: MJXc-TeX-vec-R, MJXc-TeX-vec-Rw
+
+        }
+
+ .MJXc-TeX-vec-B {
+ font-family: MJXc-TeX-vec-B,
+        MJXc-TeX-vec-Bx, MJXc-TeX-vec-Bw
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-ams-R;
+ src: local('MathJax_AMS'),
+        local('MathJax_AMS-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-ams-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-cal-B;
+ src: local('MathJax_Caligraphic
+        Bold'), local('MathJax_Caligraphic-Bold')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-cal-Bx;
+ src: local('MathJax_Caligraphic');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-cal-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-R;
+ src: local('MathJax_Fraktur'),
+        local('MathJax_Fraktur-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-B;
+ src: local('MathJax_Fraktur Bold'),
+        local('MathJax_Fraktur-Bold')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-Bx;
+ src: local('MathJax_Fraktur');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-frak-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-math-BI;
+ src: local('MathJax_Math
+        BoldItalic'), local('MathJax_Math-BoldItalic')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-math-BIx;
+ src: local('MathJax_Math');
+
+        font-weight: bold;
+ font-style: italic
+ }
+
+ @font-face
+        {
+ font-family: MJXc-TeX-math-BIw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-sans-R;
+ src: local('MathJax_SansSerif'),
+        local('MathJax_SansSerif-Regular')
+ }
+
+ @font-face
+        {
+ font-family: MJXc-TeX-sans-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-sans-B;
+ src: local('MathJax_SansSerif
+        Bold'), local('MathJax_SansSerif-Bold')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-sans-Bx;
+ src: local('MathJax_SansSerif');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-sans-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-sans-I;
+ src: local('MathJax_SansSerif
+        Italic'), local('MathJax_SansSerif-Italic')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-sans-Ix;
+ src: local('MathJax_SansSerif');
+
+        font-style: italic
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-sans-Iw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-script-R;
+ src: local('MathJax_Script'),
+        local('MathJax_Script-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-script-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-type-R;
+ src: local('MathJax_Typewriter'),
+        local('MathJax_Typewriter-Regular')
+ }
+
+ @font-face
+        {
+ font-family: MJXc-TeX-type-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-cal-R;
+ src: local('MathJax_Caligraphic'),
+        local('MathJax_Caligraphic-Regular')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-cal-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-B;
+ src: local('MathJax_Main Bold'),
+        local('MathJax_Main-Bold')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-Bx;
+ src: local('MathJax_Main');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-main-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-I;
+ src: local('MathJax_Main Italic'),
+        local('MathJax_Main-Italic')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-Ix;
+ src: local('MathJax_Main');
+
+        font-style: italic
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-main-Iw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-R;
+ src: local('MathJax_Main'),
+        local('MathJax_Main-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-math-I;
+ src: local('MathJax_Math Italic'),
+        local('MathJax_Math-Italic')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-math-Ix;
+ src: local('MathJax_Math');
+
+        font-style: italic
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-math-Iw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size1-R;
+ src: local('MathJax_Size1'),
+        local('MathJax_Size1-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size1-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size2-R;
+ src: local('MathJax_Size2'),
+        local('MathJax_Size2-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size2-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size3-R;
+ src: local('MathJax_Size3'),
+        local('MathJax_Size3-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size3-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size4-R;
+ src: local('MathJax_Size4'),
+        local('MathJax_Size4-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size4-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-R;
+ src: local('MathJax_Vector'),
+        local('MathJax_Vector-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-B;
+ src: local('MathJax_Vector Bold'),
+        local('MathJax_Vector-Bold')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-Bx;
+ src: local('MathJax_Vector');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-vec-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf')
+        format('opentype')
+ }
+
+    </style> <defs/> <g transform=" scale(1) translate(-355,-115)"> <rect x="360" y="510" width="350" height="170" rx="25.5" ry="25.5" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/> <rect x="389" y="599" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <path d="M 375 570 L 405 570 L 390 590 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 390 570 L 390 599" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/> <rect x="370" y="550" width="33" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="386.5" y="561.5"> ANT1 </text> </g> <rect x="479" y="599" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="699" y="549" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="699" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="699" y="609" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="699" y="639" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="500" y="530" width="180" height="130" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="540" y="587"> GY-GPS6MV2 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="540" y="601"> (GY-NEO6MV2) </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="540" y="615"> (u-blox NEO-6M) </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="507" y="604"> ANT </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 481 600 L 500 600" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="488" y="594"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="673" y="554"> VCC </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 700 550 L 680 550" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="694" y="544"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="673" y="584"> RX </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 700 580 L 680 580" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="694" y="574"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="673" y="614"> TX </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 700 610 L 680 610" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="694" y="604"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="673" y="644"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 700 640 L 680 640" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="694" y="634"> 5 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="457" y="520" width="23" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="468.5" y="531.5"> U11 </text> </g> <path d="M 390 600 L 480 600" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="16px"> <text x="425" y="662"> GNSS Receiver </text> </g> <rect x="1210" y="1160" width="380" height="300" rx="45" ry="45" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/> <rect x="1219" y="1349" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1359" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1369" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1379" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1389" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1399" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1409" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1219" y="1419" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1419" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1409" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1399" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1389" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1379" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1369" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1359" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1439" y="1349" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1250" y="1330" width="160" height="110" fill="none" stroke="#000000" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1353"> 1B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1350 L 1250 1350" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1363"> 2B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1360 L 1250 1360" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1373"> 3B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1370 L 1250 1370" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1383"> 4B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1380 L 1250 1380" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1393"> 5B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1390 L 1250 1390" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1403"> 6B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1400 L 1250 1400" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1413"> 7B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1410 L 1250 1410" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1257" y="1423"> E </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1221 1420 L 1250 1420" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1423"> COM </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1420 L 1410 1420" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1413"> 7C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1410 L 1410 1410" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1403"> 6C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1400 L 1410 1400" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1393"> 5C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1390 L 1410 1390" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1383"> 4C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1380 L 1410 1380" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1373"> 3C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1370 L 1410 1370" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1363"> 2C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1360 L 1410 1360" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1403" y="1353"> 1C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1440 1350 L 1410 1350" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <rect x="1230" y="1310" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1238.5" y="1321.5"> U7 </text> </g> <rect x="1290" y="1360" width="80" height="40" fill="transparent" stroke="transparent" pointer-events="none"/> <g> <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%"> <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 74px; height: 1px; padding-top: 1383px; margin-left: 1294px;"> <div style="box-sizing: border-box; font-size: 0; text-align: center; max-height: 31px; overflow: hidden; "> <div style="display: inline-block; font-size: 12px; font-family: Helvetica,Arial; color: #000; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; "> <p class="scheme-it-text-box-object" style="text-align: center ; margin: 0px"> ULN2003 </p> </div> </div> </div> </foreignObject> </g> <rect x="1479" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1559" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1499" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1519" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1539" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <path d="M 1520 1289 L 1520 1259" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1520" cy="1214" rx="45" ry="45" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <path d="M 1480 1289 L 1490 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1490 1289 L 1490 1249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1500 1289 L 1510 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1510 1289 L 1510 1259" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1540 1289 L 1530 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1530 1289 L 1530 1259" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1560 1289 L 1550 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1550 1289 L 1550 1249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="1490" y="1221"> 28BYJ-48 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1474,1283)"> <text x="1474" y="1281"> Coil4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1480 1309 L 1480 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1481,1305)"> <text x="1481" y="1303"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1554,1283)"> <text x="1554" y="1281"> Coil3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1560 1309 L 1560 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1561,1305)"> <text x="1561" y="1303"> 5 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1494,1283)"> <text x="1494" y="1281"> Coil2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1500 1309 L 1500 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1501,1305)"> <text x="1501" y="1303"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1514,1283)"> <text x="1514" y="1281"> 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1520 1309 L 1520 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1521,1305)"> <text x="1521" y="1303"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1534,1283)"> <text x="1534" y="1281"> Coil1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1540 1309 L 1540 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1541,1305)"> <text x="1541" y="1303"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="1453" y="1170" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1461.5" y="1181.5"> U8 </text> </g> <path d="M 1440 1350 L 1480 1350 L 1480 1310" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1440 1360 L 1500 1360 L 1500 1310" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1540 1310 L 1540 1370 L 1440 1370" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1440 1380 L 1560 1380 L 1560 1310" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1520 1310 L 1520 1420 L 1440 1420" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="16px"> <text x="1285" y="1202"> Date Hand </text> </g> <rect x="710" y="1160" width="380" height="300" rx="45" ry="45" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/> <rect x="719" y="1349" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1359" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1369" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1379" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1389" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1399" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1409" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="719" y="1419" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1419" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1409" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1399" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1389" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1379" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1369" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1359" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="939" y="1349" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="750" y="1330" width="160" height="110" fill="none" stroke="#000000" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1353"> 1B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1350 L 750 1350" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1363"> 2B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1360 L 750 1360" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1373"> 3B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1370 L 750 1370" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1383"> 4B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1380 L 750 1380" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1393"> 5B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1390 L 750 1390" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1403"> 6B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1400 L 750 1400" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1413"> 7B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1410 L 750 1410" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="757" y="1423"> E </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 721 1420 L 750 1420" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1423"> COM </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1420 L 910 1420" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1413"> 7C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1410 L 910 1410" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1403"> 6C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1400 L 910 1400" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1393"> 5C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1390 L 910 1390" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1383"> 4C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1380 L 910 1380" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1373"> 3C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1370 L 910 1370" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1363"> 2C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1360 L 910 1360" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="903" y="1353"> 1C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 940 1350 L 910 1350" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <rect x="730" y="1310" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="738.5" y="1321.5"> U5 </text> </g> <rect x="790" y="1360" width="80" height="40" fill="transparent" stroke="transparent" pointer-events="none"/> <g> <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%"> <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 74px; height: 1px; padding-top: 1383px; margin-left: 794px;"> <div style="box-sizing: border-box; font-size: 0; text-align: center; max-height: 31px; overflow: hidden; "> <div style="display: inline-block; font-size: 12px; font-family: Helvetica,Arial; color: #000; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; "> <p class="scheme-it-text-box-object" style="text-align: center ; margin: 0px"> ULN2003 </p> </div> </div> </div> </foreignObject> </g> <rect x="979" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1059" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="999" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1019" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1039" y="1309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <path d="M 1020 1289 L 1020 1259" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1020" cy="1214" rx="45" ry="45" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <path d="M 980 1289 L 990 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 990 1289 L 990 1249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1000 1289 L 1010 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1010 1289 L 1010 1259" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1040 1289 L 1030 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1030 1289 L 1030 1259" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1060 1289 L 1050 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1050 1289 L 1050 1249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="990" y="1221"> 28BYJ-48 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,974,1283)"> <text x="974" y="1281"> Coil4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 980 1309 L 980 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,981,1305)"> <text x="981" y="1303"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1054,1283)"> <text x="1054" y="1281"> Coil3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1060 1309 L 1060 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1061,1305)"> <text x="1061" y="1303"> 5 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,994,1283)"> <text x="994" y="1281"> Coil2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1000 1309 L 1000 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1001,1305)"> <text x="1001" y="1303"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1014,1283)"> <text x="1014" y="1281"> 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1020 1309 L 1020 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1021,1305)"> <text x="1021" y="1303"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1034,1283)"> <text x="1034" y="1281"> Coil1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1040 1309 L 1040 1289" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1041,1305)"> <text x="1041" y="1303"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="953" y="1170" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="961.5" y="1181.5"> U6 </text> </g> <path d="M 940 1350 L 980 1350 L 980 1310" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 940 1360 L 1000 1360 L 1000 1310" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1040 1310 L 1040 1370 L 940 1370" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 940 1380 L 1060 1380 L 1060 1310" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1020 1310 L 1020 1420 L 940 1420" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="16px"> <text x="795" y="1202"> Hour Hand </text> </g> <rect x="1390" y="120" width="380" height="300" rx="45" ry="45" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/> <rect x="1399" y="309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="319" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="329" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="339" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="349" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="359" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="369" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1399" y="379" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="379" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="369" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="359" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="349" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="339" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="329" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="319" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1619" y="309" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1430" y="290" width="160" height="110" fill="none" stroke="#000000" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="313"> 1B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 310 L 1430 310" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="323"> 2B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 320 L 1430 320" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="333"> 3B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 330 L 1430 330" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="343"> 4B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 340 L 1430 340" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="353"> 5B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 350 L 1430 350" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="363"> 6B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 360 L 1430 360" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="373"> 7B </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 370 L 1430 370" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"> <text x="1437" y="383"> E </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1401 380 L 1430 380" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="383"> COM </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 380 L 1590 380" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="373"> 7C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 370 L 1590 370" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="363"> 6C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 360 L 1590 360" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="353"> 5C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 350 L 1590 350" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="343"> 4C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 340 L 1590 340" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="333"> 3C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 330 L 1590 330" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="323"> 2C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 320 L 1590 320" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" text-anchor="end" font-size="10px"> <text x="1583" y="313"> 1C </text> </g> <g fill="#000000" font-family="Arial,Helvetica" font-size="10px"/> <path d="M 1620 310 L 1590 310" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <rect x="1400" y="270" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1408.5" y="281.5"> U3 </text> </g> <rect x="1470" y="320" width="80" height="40" fill="transparent" stroke="transparent" pointer-events="none"/> <g> <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%"> <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 74px; height: 1px; padding-top: 343px; margin-left: 1474px;"> <div style="box-sizing: border-box; font-size: 0; text-align: center; max-height: 31px; overflow: hidden; "> <div style="display: inline-block; font-size: 12px; font-family: Helvetica,Arial; color: #000; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; "> <p class="scheme-it-text-box-object" style="text-align: center ; margin: 0px"> ULN2003 </p> </div> </div> </div> </foreignObject> </g> <rect x="1659" y="269" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1739" y="269" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1679" y="269" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1699" y="269" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1719" y="269" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <path d="M 1700 249 L 1700 219" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1700" cy="174" rx="45" ry="45" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <path d="M 1660 249 L 1670 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1670 249 L 1670 209" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1680 249 L 1690 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1690 249 L 1690 219" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1720 249 L 1710 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1710 249 L 1710 219" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1740 249 L 1730 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1730 249 L 1730 209" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="1670" y="181"> 28BYJ-48 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1654,243)"> <text x="1654" y="241"> Coil4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1660 269 L 1660 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1661,265)"> <text x="1661" y="263"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1734,243)"> <text x="1734" y="241"> Coil3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1740 269 L 1740 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1741,265)"> <text x="1741" y="263"> 5 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1674,243)"> <text x="1674" y="241"> Coil2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1680 269 L 1680 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1681,265)"> <text x="1681" y="263"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1694,243)"> <text x="1694" y="241"> 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1700 269 L 1700 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1701,265)"> <text x="1701" y="263"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1714,243)"> <text x="1714" y="241"> Coil1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1720 269 L 1720 249" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1721,265)"> <text x="1721" y="263"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="1633" y="130" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1641.5" y="141.5"> U2 </text> </g> <path d="M 1620 310 L 1660 310 L 1660 270" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1620 320 L 1680 320 L 1680 270" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1720 270 L 1720 330 L 1620 330" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1620 340 L 1740 340 L 1740 270" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1700 270 L 1700 380 L 1620 380" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="16px"> <text x="1475" y="162"> Minute Hand </text> </g> <rect x="819" y="589" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="609" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="629" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="649" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="669" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="689" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="709" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="729" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="749" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="769" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="789" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="819" y="809" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="809" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="789" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="769" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="749" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="729" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="709" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="689" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="669" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="649" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="629" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="609" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="989" y="589" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="840" y="570" width="130" height="250" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="880" y="692"> SparkFun </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="880" y="706"> Pro Micro </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="594"> TXO </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 590 L 840 590" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="584"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="614"> RXI </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 610 L 840 610" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="604"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="634"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 630 L 840 630" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="624"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="654"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 650 L 840 650" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="644"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="674"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 670 L 840 670" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="664"> 5 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="694"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 690 L 840 690" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="684"> 6 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="714"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 710 L 840 710" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="704"> 7 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="734"> 5 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 730 L 840 730" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="724"> 8 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="754"> 6 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 750 L 840 750" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="744"> 9 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="774"> 7 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 770 L 840 770" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="764"> 10 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="794"> 8 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 790 L 840 790" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="784"> 11 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="847" y="814"> 9 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 821 810 L 840 810" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px"> <text x="828" y="804"> 12 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="814"> 10 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 810 L 970 810" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="804"> 13 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="794"> 16 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 790 L 970 790" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="784"> 14 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="774"> 14 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 770 L 970 770" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="764"> 15 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="754"> 15 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 750 L 970 750" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="744"> 16 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="734"> A0 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 730 L 970 730" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="724"> 17 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="714"> A1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 710 L 970 710" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="704"> 18 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="694"> A2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 690 L 970 690" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="684"> 19 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="674"> A3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 670 L 970 670" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="664"> 20 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="654"> VCC </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 650 L 970 650" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="644"> 21 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="634"> RST </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 630 L 970 630" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="624"> 22 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="614"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 610 L 970 610" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="604"> 23 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="963" y="594"> RAW </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 990 590 L 970 590" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px"> <text x="984" y="584"> 24 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="803" y="560" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="811.5" y="571.5"> U1 </text> </g> <rect x="1359" y="929" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1359" y="1009" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <path d="M 1335 940 L 1385 940 L 1385 1000 L 1335 1000 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1342 950 C 1352 950 1352 950 1352 950" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1347 945 C 1347 955 1347 955 1347 955" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1342 958.53 C 1378 958.53 1378 958.53 1378 958.53" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1351 966 C 1369 966 1369 966 1369 966" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1342 974.53 C 1378 974.53 1378 974.53 1378 974.53" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1351 982 C 1369 982 1369 982 1369 982" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1360 931 L 1360 958" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1360 982 L 1360 1009" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/> <rect x="1306" y="930" width="24" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1318" y="941.5"> BT1 </text> </g> <rect x="1304" y="794" width="2" height="2" fill="#000000" stroke="none" transform="rotate(270,1380,815)" pointer-events="none"/> <rect x="1304" y="834" width="2" height="2" fill="#000000" stroke="none" transform="rotate(270,1380,815)" pointer-events="none"/> <rect x="1454" y="794" width="2" height="2" fill="#000000" stroke="none" transform="rotate(270,1380,815)" pointer-events="none"/> <rect x="1454" y="834" width="2" height="2" fill="#000000" stroke="none" transform="rotate(270,1380,815)" pointer-events="none"/> <rect x="1325" y="775" width="110" height="80" fill="#ffffff" stroke="black" stroke-width="2" transform="rotate(270,1380,815)" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px" transform="rotate(270,1380,815)"> <text x="1345" y="812"> DC Step Dn  </text> </g> <g fill="#000000" font-family="Arial" font-size="14px" transform="rotate(270,1380,815)"/> <g fill="#000000" font-family="Arial" font-size="14px" transform="rotate(270,1380,815)"> <text x="1345" y="826"> to 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="14px" transform="rotate(270,1380,815)"/> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"> <text x="1332" y="799"> Vin+ </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <path d="M 1306 795 L 1325 795" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" transform="rotate(270,1380,815)" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"> <text x="1313" y="789"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"> <text x="1332" y="839"> Vin- </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <path d="M 1306 835 L 1325 835" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" transform="rotate(270,1380,815)" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"> <text x="1313" y="829"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(270,1380,815)"> <text x="1428" y="799"> Vout+ </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <path d="M 1455 795 L 1435 795" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" transform="rotate(270,1380,815)" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(270,1380,815)"> <text x="1449" y="789"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(270,1380,815)"> <text x="1428" y="839"> Vout- </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <path d="M 1455 835 L 1435 835" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" transform="rotate(270,1380,815)" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(270,1380,815)"> <text x="1449" y="829"> 4 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px" transform="rotate(270,1380,815)"/> <rect x="1330" y="890" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1338.5" y="901.5"> U4 </text> </g> <rect x="1359" y="1059" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <path d="M 1349 1081 C 1371.02 1081 1371.02 1081 1371.02 1081" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1353 1087 C 1362.57 1087 1367 1087 1367 1087" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1357 1093 C 1360.12 1093 1363 1093 1363 1093" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1360 1061 L 1360 1079" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1360 930 L 1360 890" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1400 310 L 810 310 L 810 670 L 820 670" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1400 320 L 790 320 L 790 690 L 820 690" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1400 330 L 770 330 L 770 710 L 820 710" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1400 340 L 750 340 L 750 730 L 820 730" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1360 1060 L 1360 1010" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1400 890 L 1400 1060 L 1362 1060" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1360" cy="1060" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1400 740 L 1400 430 L 1400 380" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1360 740 L 1360 650 L 990 650" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1220 1420 L 1150 1420 L 1150 1510 L 1620 1510 L 1620 650 L 1402 650" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1400" cy="650" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 720 1420 L 680 1420 L 680 1510 L 1148 1510" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1150" cy="1510" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1130 652 L 1130 1420 L 1022 1420" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1130" cy="650" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <ellipse cx="1020" cy="1420" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1132 1130 L 1600 1130 L 1600 1420 L 1492 1420" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1130" cy="1130" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <ellipse cx="1490" cy="1420" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 720 1350 L 640 1350 L 640 750 L 820 750" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 720 1360 L 630 1360 L 630 770 L 820 770" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 720 1370 L 620 1370 L 620 790 L 820 790" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 720 1380 L 610 1380 L 610 810 L 820 810" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1220 1350 L 1150 1350 L 1150 810 L 990 810" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1220 1360 L 1160 1360 L 1160 790 L 990 790" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1220 1370 L 1170 1370 L 1170 770 L 990 770" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1220 1380 L 1180 1380 L 1180 750 L 990 750" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1620 382 L 1620 580 L 1360 580 L 1360 648" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1620" cy="380" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <ellipse cx="1360" cy="650" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 990 610 L 1398 610" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1400" cy="610" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <rect x="1689" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1709" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1729" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1680" y="479" width="60" height="80" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="1690" y="496"> A3144 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1684,553)"> <text x="1684" y="551"> 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1690 579 L 1690 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1691,575)"> <text x="1691" y="573"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1704,553)"> <text x="1704" y="551"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1710 579 L 1710 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1711,575)"> <text x="1711" y="573"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1724,553)"> <text x="1724" y="551"> D </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1730 579 L 1730 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1731,575)"> <text x="1731" y="573"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="1646" y="470" width="24" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1658" y="481.5"> U14 </text> </g> <rect x="1789" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1809" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1829" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1780" y="479" width="60" height="80" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="1790" y="496"> A3144 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1784,553)"> <text x="1784" y="551"> 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1790 579 L 1790 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1791,575)"> <text x="1791" y="573"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1804,553)"> <text x="1804" y="551"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1810 579 L 1810 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1811,575)"> <text x="1811" y="573"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1824,553)"> <text x="1824" y="551"> D </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1830 579 L 1830 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1831,575)"> <text x="1831" y="573"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="1753" y="470" width="17" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1761.5" y="481.5"> U9 </text> </g> <rect x="1889" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1909" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1929" y="579" width="2" height="2" fill="#000000" stroke="none" pointer-events="none"/> <rect x="1880" y="479" width="60" height="80" fill="#ffffff" stroke="black" stroke-width="2" pointer-events="none"/> <g fill="#000000" font-family="Arial" font-size="14px"> <text x="1890" y="496"> A3144 </text> </g> <g fill="#000000" font-family="Arial" font-size="14px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1884,553)"> <text x="1884" y="551"> 5V </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1890 579 L 1890 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1891,575)"> <text x="1891" y="573"> 1 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1904,553)"> <text x="1904" y="551"> GND </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1910 579 L 1910 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1911,575)"> <text x="1911" y="573"> 2 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(-270,1924,553)"> <text x="1924" y="551"> D </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <path d="M 1930 579 L 1930 559" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000000" font-family="Arial" text-anchor="end" font-size="10px" transform="rotate(90,1931,575)"> <text x="1931" y="573"> 3 </text> </g> <g fill="#000000" font-family="Arial" font-size="10px"/> <rect x="1846" y="470" width="24" height="13" fill-opacity="0" fill="#dae2f2" stroke="none" pointer-events="none"/> <g fill="#000000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="12px"> <text x="1858" y="481.5"> U10 </text> </g> <path d="M 1730 580 L 1730 730 L 990 730" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1830 580 L 1830 710 L 990 710" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1930 580 L 1930 690 L 990 690" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 1710 580 L 1710 610 L 1402 610" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1400" cy="610" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1810 580 L 1810 610 L 1712 610" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1710" cy="610" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1910 580 L 1910 610 L 1812 610" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1810" cy="610" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 700 580 L 730 580 L 730 590 L 820 590" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <path d="M 700 640 L 730 640 L 730 630 L 820 630" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="14px"> <text x="1710" y="461"> HR ALIGN </text> </g> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="14px"> <text x="1810" y="461"> MIN ALIGN </text> </g> <g fill="#000" font-family="Arial,Helvetica" font-weight="bold" text-anchor="middle" font-size="14px"> <text x="1910" y="461"> DATE ALIGN </text> </g> <path d="M 700 550 L 1360 550 L 1360 578" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1360" cy="580" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1688 580 L 1622 580" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1690" cy="580" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <ellipse cx="1620" cy="580" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1788 580 L 1692 580" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1790" cy="580" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <ellipse cx="1690" cy="580" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 1890 580 L 1792 580" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> <ellipse cx="1790" cy="580" rx="2" ry="2" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none"/> <path d="M 820 610 L 700 610" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/> </g> </svg>
