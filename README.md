@@ -15,6 +15,39 @@ Analog clock built upon Arduino that displays time based on GNSS (GPS and other 
 The SW part is composed of mainly two parts. One part collects NMEA (National Marine Electronics Association) messages from the GNSS module and parses current UTC time and date from it. The parsed UTC time and date values then are converted to the local ones and stored in global variables. The other part derives the differences from the local time and date to the current position of hands and moves the hands accordingly. Current positions of the hands are also stored in a set of global variables. Below two subsections elaborate more on each part.
 
 ### NMEA messages parser
+The adopted GNSS module GY-GPS6MV2 (seems to be a dead copy of GY-NEO6MV6) communicates with SparkFun Pro Micro via the secondary (N.B. USB port is the primary one) serial communication bus isserial communication bus which is mapped to `TXO` and `RXI` pins. Once 5V power is provided to the module, it periodically transmits NMEA messages in text like below even when the module is not locked to any GNSS satelite.
+
+```
+$BDGSA,A,1,,,,,,,,,,,,,,,,4*17
+$GPGSV,0,1,00*78
+$BDGSV,0,1,00*69
+$GNRMC,,V,,,,,,,,,,N*4D
+$GNZDA,,,,,,*56
+$GNGGA,,,,,,0,00,,,M,,M,,*78
+$GPGSA,A,1,,,,,,,,,,,,,,,,1*03
+$BDGSA,A,1,,,,,,,,,,,,,,,,4*17
+$GPGSV,0,1,/0*78
+$BDGSV,0,1,00*69
+```
+
+The messages are in NMEA format. Each line represents a sperate NMEA message, and is terminated by one carriage return (<CR>) and one line feed (<LR>) characters in series. Every NMEA message is in the form of `$[GnssType - 2 char's][MessageType: 3-char's],[field_1],[field_2],...,[field_n]*[Checksum: 2-chars]`. Below is a brief description of fields of each message.
+* `GnssType` represents the type of GNSS the message is extracted from. `GP` for GPS, `GN` for GLONASS, `BD` for Beidou, etc.
+* `MessageType` represents the kind of information the message contains. For instance, `GGA` messages contain overview of information from the corresponding GNSS including UTC time and position of the receiver, `GSV` the list of GNSS satelites to which the receiver is locked to, and `ZDA` UTC time and date.
+* `field_i` are the actual data of each message. `MessageType` and each field is delimited by a comma.
+* `Checksum`, prefixed by an asterisk is a two-digit hex number (i.e. 1 byte), which is derived by cumulative XOR of all preceding characters.
+
+Note that in the above example NMEA messages lots of fields are empty. Below are example NMEA messages when the module is locked to at least one GNSS. Notice that multiple fields are no longer void.
+
+```
+$GPGSV,2,2,06,23,,,,24,,,*78
+$BDGSV,2,1,05,2,,,,4,,,,1,,,,3,,,*6A
+$BDGSV,2,2,05,5,,,*58
+$GNRMC,032307.514,V,,,,,,,191023,,,N*5E
+$GNZDA,032307.514,19,10,2023,,*47
+$GNGGA,032308.514,,,,,0,00,+<M,,M,,*6C
+```
+
+Among various types of NMEA messages the parser only targets ZDA messages and once its checksum is verified it extracts UTC minute, hour, and date. These values are then further converted into those of the local timezone which is selected by a global variable `localOffset2Utc`. One thing worth to be noted in UTC-to-local conversion is the date. Unlike minute and hour, it is quite tricky to determine what the next/previous date is when the UTC date is the start/end date of the month. It gets even complicated with the concept of leap year. This complicated task is implemented in `refineDateMonthYear` with lots of branches.
 
 ### Hand-moving mechanism
 The differences in time or date values between the local time/date and current hand positions are converted to the number of steps the stepper motors connected to the hands should rotate. The number of steps per unit time or date differs not only by the hand but also by the hand positions to compensate gravitational forces applied to the hands. Below is an example code snippet that determines the number of steps to be rotated for the minute hand.
@@ -34,7 +67,7 @@ else
 Here `localTimeDateMonthYearHand[MINUTE]` represents current minute hand position, and `minStepper.step(...)` moves the stepper motor for the minute hand. The key idea here is to derive integer number of steps that can best represent natual movement of the minute hand because the stepper motor cannot move less than one step (N.B. I did not consider microstepping because the adopted stepper motors---28BYJ-48---were quite inaccurate even when it moved by integer steps). The branch is mainly composed of two parts: one for moving the hand within the first semicircle (i.e. 0--30 min.) and the other for the second one so that the number of steps can be taken differently depending on whether the hand is descending or ascending. The conditions with the remainder operator makes up a practical non-integer number of steps for moving the hand, which would be a fine adjustment.
 To take up the cases that the hands should move more than one unit (i.e. the differences between the local time and current hand position is not one. The above conditional statement is inside an external loop which reduces the difference by one at a time until it gets to zero.
 
-## Schematic
+## Schematic and parts arrangement
 ![gpsClock Schematic](/images/gpsClockSchematic.svg)
 
 ## Clock frame and other hardware
