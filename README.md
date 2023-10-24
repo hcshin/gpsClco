@@ -7,7 +7,7 @@ Analog clock built upon Arduino that displays time based on GNSS (GPS and other 
 * Current implementation adopts SparkFun Pro Micro (https://www.sparkfun.com/products/12640). However, one can build the clock with any other Arduino board with enough number of ports.
 * It uses GY-NEO6MV2 GNSS (GPS) board on which ublox NEO-6M module is mounted. All NEO-6M modules have internal battery so can it can hold satelite tracking information for short amount of time without external power supply. In addition, the board is equipped with a ceramic antenna and thus can work standalone with adequate power supply.
 * To avoid complicated gear trains, the clock uses separate motors for all of the hands. That is, only one hand is moved by a motor. Note that, the adoption of multiple motors do not have major impact on the battery lifetime of the clock because Arduino (even in idle state) is.
-* Hall sensors and magnets are used to align the hands to the base positions. The sensors are attached to appropriated positions of the clock back plate and magnets to the back of each hand. On boot, each hand rotates until one is at its base position then each hand starts moving accordingly to the time values. The sensors are also used for aligning each hand when each hand hits its base time value (0 minute, 0/12 hour, and 1st date). This mechanism enables the hands to anchor to the base positions so that position erros do not build up with lack of any measures for hand-position measurement.
+* Hall sensors and magnets are used to align the hands to the base positions.
 * While handling date values in deriving local time from UTC one provided by the GNSS module, last day of each month rules are precisely considered. Especially, for the last day of February, it completely follows Gregorian calender.
 * Though no hand is assigned to month and year, those time values are tracked internally and can be displayed with minimum effort of adding a motor and hand or a display.
 
@@ -47,9 +47,11 @@ $GNZDA,032307.514,19,10,2023,,*47
 $GNGGA,032308.514,,,,,0,00,+<M,,M,,*6C
 ```
 
-Among various types of NMEA messages the parser only targets ZDA messages and once its checksum is verified it extracts UTC minute, hour, and date. These values are then further converted into those of the local timezone which is selected by a global variable `localOffset2Utc`. One thing worth to be noted in UTC-to-local conversion is the date. Unlike minute and hour, it is quite tricky to determine what the next/previous date is when the UTC date is the start/end date of the month. It gets even complicated with the concept of leap year. This complicated task is implemented in `refineDateMonthYear` with lots of branches.
+Among various types of NMEA messages the parser only targets ZDA messages and once its checksum is verified it extracts UTC minute, hour, and date. For instance, the ZDA message in the above example, `$GNZDA,032307.514,19,10,2023,,*47`, contains current UTC hour (03), miute (23), second (07), date (19), month (10), and year (2023). These UTC time values are then further converted into those of the local timezone selected by a global variable `localOffset2Utc`. One thing worth to be noted in UTC-to-local conversion is the date. Unlike minute and hour, it is quite tricky to determine what the next/previous date is when the UTC date is the start/end date of the month. It gets even complicated when it comes to a leap year. This complicated task is implemented in `refineDateMonthYear` with lots of branches.
 
 ### Hand-moving mechanism
+gpsClock does not have any menas for tracking instantaneous position of each hand. Instead, Hall sensors are attached to appropriated positions of the clock back plate and magnets to the back of each hand. On boot, each hand rotates until one is at its base position then each hand starts moving accordingly to the time values. The sensors are also used for aligning each hand when each hand hits its base time value (0 minute, 0/12 hour, and 1st date). This mechanism enables the hands to anchor to the base positions so that position erros do not build up with lack of any measures for hand-position measurement.
+
 The differences in time or date values between the local time/date and current hand positions are converted to the number of steps the stepper motors connected to the hands should rotate. The number of steps per unit time or date differs not only by the hand but also by the hand positions to compensate gravitational forces applied to the hands. Below is an example code snippet that determines the number of steps to be rotated for the minute hand.
 
 ```
@@ -65,10 +67,11 @@ else
 ```
 
 Here `localTimeDateMonthYearHand[MINUTE]` represents current minute hand position, and `minStepper.step(...)` moves the stepper motor for the minute hand. The key idea here is to derive integer number of steps that can best represent natual movement of the minute hand because the stepper motor cannot move less than one step (N.B. I did not consider microstepping because the adopted stepper motors---28BYJ-48---were quite inaccurate even when it moved by integer steps). The branch is mainly composed of two parts: one for moving the hand within the first semicircle (i.e. 0--30 min.) and the other for the second one so that the number of steps can be taken differently depending on whether the hand is descending or ascending. The conditions with the remainder operator makes up a practical non-integer number of steps for moving the hand, which would be a fine adjustment.
-To take up the cases that the hands should move more than one unit (i.e. the differences between the local time and current hand position is not one. The above conditional statement is inside an external loop which reduces the difference by one at a time until it gets to zero.
+To take up the cases that the hands should move more than one unit (i.e. the differences between the local time and current hand position is more than one). The above conditional statement is inside an external loop which reduces the difference by one at a time until it gets to zero.
 
-## Schematic and parts arrangement
+## Parts arrangement and Schematic
 ![gpsClock Schematic](/images/gpsClockSchematic.svg)
+![gpsClock Parts Arrangement](/images/gpsClockPhoto.png)
 
 ## Clock frame and other hardware
 ### 3D model of clock frame and hands 
@@ -77,6 +80,17 @@ All models are drawn by [Tinkercad](https://www.tinkercad.com/). For CNC works o
 * Front and back plate: https://www.tinkercad.com/things/elm0u6JZKUI?sharecode=4npgwWMFvZ8sjh_XxynUjGjd_OhpR7mrLe-HZ6zU8vI
 * Hands: https://www.tinkercad.com/things/gcw43MZUidC?sharecode=QKOi6mAoi5HatGKXw9UPfKnBdrYteMXhOlwsAzMnTao
 
-### List of hardware with description
+### List of parts 
+| Part Name | Quantity | Description |
+| --------- | -------- | ----------- |
+| SparkFun Pro Micro | 1 | Microcontroller |
+| GY-GPS6MV2<br>(or GY-NEO6MV6) | 1 | GNSS module (antenna included) |
+| DC-DC Step Down Converter (5V) | 1 | 5V DC supply<br>Any converter with enough capacity works |
+| Stepper Motor | 3 | 28BYJ-48<br>Any stepper with enough resolution works |
+| Stepper Driver | 3 | Stepper Driver for 28BYJ-48 Stepper (ULN2003-based)<br>Any driver compatible with the stepper works |
+| Hall Sensor | 3 | A3144-based module |
+| 7.4V Li-Ion Battery | 1 | Any battery higher than 5V with enough capcacity works<br>Using connectors for easy battery replacement is recommended |
+| Clock frame | 1 | Front/back plate and PCB support for holding the two plates |
+| Clock hands set | 1 | Hour, minute, and date hands |
 
 ## Video
