@@ -96,7 +96,7 @@ Considering the significant amount of power consumption, 2S1P 21700 module was c
 ![gpsClock Schematic](/images/gpsClockSchematic.svg)
 
 ### Cross Section of Mechanical Structure
-![gpsClock Cross Section](/image/gpsClockCrossSection.png)
+![gpsClock Cross Section](/images/gpsClockCrossSection.png)
 
 ### 3D model of clock frame and hands 
 All models are drawn by [Tinkercad](https://www.tinkercad.com/). For CNC works or 3D printing, you can download STL files in Tinkercad pages.
