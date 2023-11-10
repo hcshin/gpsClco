@@ -130,3 +130,4 @@ All models are drawn by [Tinkercad](https://www.tinkercad.com/). For CNC works o
 | Clock Hands Set | 1 | Hour, minute, and date hands<br>STL file can be downloaded from [Tinkercad](#3D-model-of-clock-frame-and-hands)<br>Any hands that can be fixed on the shafts work |
 
 ## Video
+[Link to YouTube Video](https://youtu.be/RzCeB56rg3w?si=NV_e_4AvJzAOjbFe)
